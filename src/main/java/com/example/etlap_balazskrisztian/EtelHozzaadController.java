@@ -32,7 +32,7 @@ public class EtelHozzaadController extends Controller{
     }
 
     @FXML
-    public void etelHozzaadBtnClick(ActionEvent actionEvent) {
+    public void btnEtelHozzaadClick(ActionEvent actionEvent) {
         String name = tfEtelNev.getText().trim();
         if (name.isEmpty()) {
             alert("A Név mező nem lehet üres");
@@ -76,4 +76,5 @@ public class EtelHozzaadController extends Controller{
             errorAlert(e);
         }
     }
+
 }

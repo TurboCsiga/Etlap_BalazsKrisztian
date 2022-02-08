@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etlap_balazskrisztian.HelloController">
+<GridPane prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etlap_balazskrisztian.EtelHozzaadController">
     <columnConstraints>
         <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
@@ -25,7 +25,7 @@
     <Label text="Leírás :" GridPane.rowIndex="1" />
     <Label text="Kategória :" GridPane.rowIndex="2" />
     <Label text="Ár :" GridPane.rowIndex="3" />
-    <Button fx:id="etelHozzaadBtn" mnemonicParsing="false" onAction="#btnUjEtelClick" prefHeight="26.0" prefWidth="150.0" text="Hozzáadás" GridPane.columnIndex="1" GridPane.rowIndex="4">
+    <Button fx:id="etelHozzaadBtn" mnemonicParsing="false" onAction="#btnEtelHozzaadClick" prefHeight="26.0" prefWidth="150.0" text="Hozzáadás" GridPane.columnIndex="1" GridPane.rowIndex="4">
       <GridPane.margin>
          <Insets left="35.0" />
       </GridPane.margin></Button>

@@ -3,8 +3,9 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox prefHeight="500.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etlap_balazskrisztian.HelloController">
+<VBox prefHeight="500.0" prefWidth="440.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etlap_balazskrisztian.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -16,7 +17,10 @@
                 <Button fx:id="btnKategoria" mnemonicParsing="false" onAction="#KategoriaClick" text="Kategóriák" />
             </children>
         </HBox>
-        <Label text="Árnövelés:" />
+        <Label text="Árnövelés:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
         <HBox prefHeight="0.0" prefWidth="460.0" spacing="10.0">
             <children>
                 <Spinner fx:id="spEmelesFixOsszeggel">
@@ -24,7 +28,13 @@
                         <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="10" initialValue="50" max="3000" min="50" />
                     </valueFactory>
                 </Spinner>
-                <Label text="Fix értékkel" />
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Fixértékes" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
                 <Button fx:id="btnEmelesFix" mnemonicParsing="false" onAction="#EmelesFixClick" text="Növelés" />
             </children>
         </HBox>
@@ -35,13 +45,22 @@
                         <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="5" initialValue="5" max="50" min="5" />
                     </valueFactory>
                 </Spinner>
-                <Label text="\%-osan" />
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Százalékos" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
                 <Button fx:id="btnEmelesSzazalek" mnemonicParsing="false" onAction="#EmelesSzazalekClick" text="Növelés" />
             </children>
         </HBox>
         <HBox prefHeight="33.0" prefWidth="460.0">
             <children>
-                <Label text="Szűrés kategória szerint: " />
+                <Label text="Szűrés kategória szerint: ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
                 <ChoiceBox fx:id="cbKategória" prefWidth="150.0" />
             </children>
         </HBox>
