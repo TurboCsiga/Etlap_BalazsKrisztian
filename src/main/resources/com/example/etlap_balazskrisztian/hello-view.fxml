@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="500.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etlap_balazskrisztian.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <HBox prefHeight="30.0" prefWidth="460.0" spacing="20.0">
+            <children>
+                <Button fx:id="btnUjEtel" mnemonicParsing="false" onAction="#btnUjEtelClick" text="Új étel felvétele" />
+                <Button fx:id="btnEtelTorol" mnemonicParsing="false" onAction="#btnEtelTorolClick" text="Törlés" />
+                <Button fx:id="btnKategoria" mnemonicParsing="false" onAction="#KategoriaClick" text="Kategóriák" />
+            </children>
+        </HBox>
+        <Label text="Árnövelés:" />
+        <HBox prefHeight="0.0" prefWidth="460.0" spacing="10.0">
+            <children>
+                <Spinner fx:id="spEmelesFixOsszeggel">
+                    <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="10" initialValue="50" max="3000" min="50" />
+                    </valueFactory>
+                </Spinner>
+                <Label text="Fix értékkel" />
+                <Button fx:id="btnEmelesFix" mnemonicParsing="false" onAction="#EmelesFixClick" text="Növelés" />
+            </children>
+        </HBox>
+        <HBox prefHeight="16.0" prefWidth="460.0" spacing="10.0">
+            <children>
+                <Spinner fx:id="spSzazalekosEmeles">
+                    <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="5" initialValue="5" max="50" min="5" />
+                    </valueFactory>
+                </Spinner>
+                <Label text="\%-osan" />
+                <Button fx:id="btnEmelesSzazalek" mnemonicParsing="false" onAction="#EmelesSzazalekClick" text="Növelés" />
+            </children>
+        </HBox>
+        <HBox prefHeight="33.0" prefWidth="460.0">
+            <children>
+                <Label text="Szűrés kategória szerint: " />
+                <ChoiceBox fx:id="cbKategória" prefWidth="150.0" />
+            </children>
+        </HBox>
+        <TableView fx:id="etelTable" maxWidth="400.0" prefHeight="275.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="etelNevCell" prefWidth="225.0" text="Név" />
+                <TableColumn fx:id="etelKategoriaCell" prefWidth="100.0" text="Kategória" />
+                <TableColumn fx:id="etelArCell" prefWidth="75.0" text="Ár (Ft)" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

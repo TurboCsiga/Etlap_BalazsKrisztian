@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etlap_balazskrisztian.KategoriaHozzaadController">
+    <children>
+        <HBox prefHeight="40.0" prefWidth="200.0">
+            <children>
+                <Label text="Név: " />
+                <TextField fx:id="tfKategoriaNev" />
+            </children>
+        </HBox>
+        <Button fx:id="btnUjKategoria" mnemonicParsing="false" onAction="#ujKategoriaClick" prefHeight="25.0" prefWidth="200.0" text="Hozzáadás">
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin></Button>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" top="10.0" />
+    </padding>
+</VBox>

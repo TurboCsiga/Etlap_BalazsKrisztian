@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etlap_balazskrisztian.KategoriaController">
+    <children>
+          <Button fx:id="btnKategoriaHozzaad" mnemonicParsing="false" onAction="#KategoriaHozzaadClick" text="Hozzáadás">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+          <Button fx:id="btnKategoriaTorol" mnemonicParsing="false" onAction="#KategoriaTorolClick" text="Törlés">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </VBox.margin>
+      </Button>
+        <TableView fx:id="categoryTable" prefHeight="200.0" prefWidth="220.0">
+            <columns>
+                <TableColumn fx:id="kategoriaId" prefWidth="50.0" text="id" />
+                <TableColumn fx:id="kategoriaName" prefWidth="220.0" text="Név" />
+            </columns>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </VBox.margin>
+        </TableView>
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</VBox>

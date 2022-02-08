@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etlap_balazskrisztian.HelloController">
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="57.0" minHeight="0.0" prefHeight="53.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+
+    <Label text="Név :" />
+    <TextField fx:id="tfEtelNev" GridPane.columnIndex="1">
+      <GridPane.margin>
+         <Insets left="10.0" right="10.0" />
+      </GridPane.margin></TextField>
+    <Label text="Leírás :" GridPane.rowIndex="1" />
+    <Label text="Kategória :" GridPane.rowIndex="2" />
+    <Label text="Ár :" GridPane.rowIndex="3" />
+    <Button fx:id="etelHozzaadBtn" mnemonicParsing="false" onAction="#btnUjEtelClick" prefHeight="26.0" prefWidth="150.0" text="Hozzáadás" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <GridPane.margin>
+         <Insets left="35.0" />
+      </GridPane.margin></Button>
+    <TextArea fx:id="taLeiras" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets left="10.0" right="10.0" />
+      </GridPane.margin></TextArea>
+    <ChoiceBox fx:id="cbKategoria" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <GridPane.margin>
+         <Insets left="35.0" />
+      </GridPane.margin></ChoiceBox>
+    <Spinner fx:id="spAr" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="10" initialValue="1000" max="9999" min="1" />
+        </valueFactory>
+      <GridPane.margin>
+         <Insets left="35.0" />
+      </GridPane.margin>
+    </Spinner>
+</GridPane>
